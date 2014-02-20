@@ -1,0 +1,107 @@
+/* Normalize */
+@import 'normalize';
+
+/* Width Variables */
+$width: 600px;
+
+/* Color */
+$green: #468967;
+$navy: #3F454C;
+$oragne: #B74A26;
+$yellow: #FBAF3C;
+$white: #E0DECF;
+
+/* FONTs */
+$mainFont: 'Press Start 2P', cursive;
+$bodyFont: 'Open Sans', sans-serif;
+
+/* Font Mixin */
+@mixin font-size ($sizeValue : 1.6 ){
+	font-size: $sizeValue + px;
+	font-size: ($sizeValue/10) + rem;
+}
+
+body { 
+	
+	background-image: url('../images/bg-05.png'); 
+	border-top: 15px solid $navy;
+	font-family: $bodyFont;
+	height: 100%;
+
+} 
+
+.wrapper { 
+	
+	max-width: $width;
+	width: 80%;
+	margin: 0 auto;
+
+}
+
+.button-container { 
+	
+	width: 156px;
+	margin: 40px auto;
+ 
+}
+
+button { 
+	
+	width: 150px;
+	font-family: $mainFont;
+	font-size: 22px;
+	line-height: 30px;
+	color: $navy;
+	background-color: $yellow;
+	border: none;
+	border: 3px solid $navy;
+	margin: 0 auto;
+	border-radius: 3px;
+
+}
+
+#loading {
+
+	width: 100%;
+	position: relative;
+	background-color: $green;
+	height: auto;
+	text-align: center;
+	color: $navy;
+	border-radius: 2px;
+
+
+	h1 {
+		font-family: $mainFont;
+		color: $yellow;
+		width: 100%;
+		@include font-size(19);	
+	}
+
+	a{
+		width: 100%;
+		color: $navy;
+	}
+	a:hover{
+		color: $oragne;
+	}
+	p{
+		width: 100%;
+		background-color: $yellow;
+		color: $navy;
+		padding-bottom: 40px;
+		line-height: 34px;
+	}
+}
+
+#turk {
+	
+	min-width: 40%; 
+	padding: 20px 10px 0;
+	
+}
+
+#loader {
+	width: 30px;
+	padding: 10px;
+}
