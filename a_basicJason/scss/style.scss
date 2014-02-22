@@ -1,0 +1,69 @@
+/* Normalize */
+@import 'normalize';
+
+/* Width Variables */
+$width: 800px;
+
+/* Color */
+$cream: #FDF6E3;
+$brown: #C8BCA3;
+$white: #F5F2ED;
+$text: #666053;
+
+/* FONTs */
+$HeaderFont: 'Sorts Mill Goudy', serif;
+$bodyFont: 'Muli', sans-serif;
+
+/* Font Mixin */
+@mixin font-size ($sizeValue : 1.6 ){
+	font-size: $sizeValue + px;
+	font-size: ($sizeValue/10) + rem;
+}
+
+body {
+	background-color: $cream;
+	font-family: $bodyFont;
+	color: $text;
+}
+
+h1,h2 { font-family: $HeaderFont;}
+
+h1 {text-align: center; color: $brown;}
+
+h2 { color: $text; }
+
+.wrapper {
+	max-width: $width;
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 20px;
+
+		img {
+		width: 100%;
+	}
+}
+
+button {
+	background-color: $brown;
+	border: none;
+	color: $cream;
+	width: 20%;
+	height: 60px;
+	position: relative;
+	left: 40%;
+}
+
+button:hover {
+background-color: #D3C6B5;
+}
+
+.articles {
+	border-top: 1px solid $brown;
+	margin-top:  40px;
+}
+
+#article-feed { margin-bottom: 40px;}
+
+a { color: $brown; }
+a:hover { color: $text; }
