@@ -1,6 +1,6 @@
 $('#save').click(function () {
     // add loading image to div
-    $('#loading').html('<img id="loader" src="images/712.gif"><br>loading...');
+    $('#loading').html('<img id="loader" src="../images/712.gif"><br>loading...');
     
     // run ajax request
     $.ajax({
